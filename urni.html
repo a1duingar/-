@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/stile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Шаблон</title>
+</head>
+
+<body style="background-color: rgb(240, 240, 240);">
+    <header>
+        <div class="skidki-img">
+            <img src="img/skidk.png" height="220px" width="90%" style="margin-top: 0; margin-left:80px; border-radius:10px">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(256,256,256); margin-left:20px; margin-right:20px; border-radius:5px">
+            <div class="container-fluid">
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 5px; padding-left:5px; font-size:20px; background-color: rgb(0,187,0); width:105px; height:35px; border-radius:3px">
+                    Каталог
+                  </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="vedras.html">Ведра,канистры</a></li>
+                    <li><a class="dropdown-item" href="#">Веники,метлы,совки,швабры</a></li>
+                    <li><a class="dropdown-item" href="urni.html">Урны для мусора</a></li>
+                    <li><a class="dropdown-item" href="trapki.html">Тряпки,салфетки</a></li>
+                </ul>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="4lab.html">Клуб покупателей</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================ -->
+    <button class="cart" id="cart">
+        <img class="cart__image" src="img/cart.png" alt="Cart" style="width: 45px; height:45px" />
+        <div class="cart__num" id="cart_num">0</div>
+    </button>
+    <!-- Модальное окно корзины -->
+    <div class="popup">
+        <div class="popup__container" id="popup_container">
+            <div class="popup__item">
+                <h1 class="popup__title">Оформление заказа</h1>
+            </div>
+            <div class="popup__item" id="popup_product_list">
+            </div>
+            <div class="popup__item">
+                <div class="popup__cost">
+                    <h2 class="popup__cost-title">Итого</h2>
+                    <output class="popup__cost-value" id="popup_cost">250</output>
+                </div>
+                <div class="popup__cost">
+                    <h2 class="popup__cost-title">Скидка</h2>
+                    <output class="popup__cost-value" id="popup_discount">25</output>
+                </div>
+                <div class="popup__cost">
+                    <h2 class="popup__cost-title">Итого со скидкой</h2>
+                    <output class="popup__cost-value" id="popup_cost_discount">225</output>
+                </div>
+            </div>
+            <button class="popup__close" id="popup_close"> X </button>
+        </div>
+    </div>
+    <!-- модальное окно корзины - конец -->
+    <div class="main">
+        <ul class="myne">
+            <div class="wrapper">
+                <header>
+                    <h2>Категории</h2>
+                </header>
+                <div>
+                    <div class="cat1">
+                    <a  href="vedras.html" style="font-size: 23px; text-decoration:none; color:black">Ведра,канистры</a>
+                    </div>
+                    <div class="cat2">
+                        <a href="veniki.html" style="font-size: 23px; text-decoration:none; color:black">Веники,метлы,совки,швабры</a>
+                    </div>
+                    <div class="cat3">
+                        <a class="3cat" href="urni.html" style="font-size: 23px; text-decoration:none; color:black">Урны для мусора</a>
+                    </div>
+                    <div class="cat4">
+                        <a class="4cat" href="trapki.html" style="font-size: 23px; text-decoration:none; color:black">Тряпки,салфетки</a>
+                    </div>
+                </div>
+            </div>
+            <script src="scriptik.js"></script>
+
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-2">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;">
+                            <form onsubmit="return false;">
+                                <a href="urni/Urna1/urn1.html">
+                                    <img src="urni/Urna1/urnbez1.png" id="item_15" width="100%" height="100%" >
+                                </a>
+
+                                <br>
+                                <br>
+                                <h3 class="card_content-title" style="font-size: 20px; text-align:center; ">Урна для мусора металическая на ножках без пепельницы</h3>
+                                <p style="text-align: center; font-size: 20px"> <b class="price__item">2900</b> руб / шт</p>
+                                <button class="v-corz" onclick="addBask(15, 'Урна для мусора металическая на ножках без пепельницы', 2900);"> Добавить в корзину</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;">
+                            <form onsubmit="return false;">
+                                <a href="urni/Urna2/urn2.html">
+                                    <img src="urni/Urna2/urns1.png" id="item_16" width="100%" height="100%" >
+                                </a>
+
+                                <br>
+                                <br>
+                                <h3 class="card_content-title" style="font-size: 20px; text-align:center; ">Урна для мусора металическая на ножках с пепельницей</h3>
+                                <p style="text-align: center; font-size: 20px"> <b class="price__item">3300</b> руб / шт</p>
+                                <button class="v-corz" onclick="addBask(16, 'Урна для мусора металическая на ножках с пепельницей', 3300);"> Добавить в корзину</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;">
+                            <form onsubmit="return false;">
+                                <a href="urni/Bak/bak.html">
+                                    <img src="urni/Bak/bak.png" id="item_17" width="100%" height="100%" >
+                                </a>
+
+                                <br>
+                                <br>
+                                <h3 class="card_content-title" style="font-size: 20px; text-align:center; ">Бак с крышкой 90л</h3>
+                                <p style="text-align: center; font-size: 20px"> <b class="price__item">1300</b> руб / шт</p>
+                                <button class="v-corz" onclick="addBask(17, 'Бак с крышкой 90л', 1300);"> Добавить в корзину</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;">
+                            <form onsubmit="return false;">
+                                <a href="urni/Kontainer/kont.html">
+                                    <img src="urni/Kontainer/kont.png" id="item_18" width="100%" height="100%" >
+                                </a>
+
+                                <br>
+                                <br>
+                                <h3 class="card_content-title" style="font-size: 20px; text-align:center; ">Контейнер для мусора 15л</h3>
+                                <p style="text-align: center; font-size: 20px"> <b class="price__item">1200</b> руб / шт</p>
+                                <button class="v-corz" onclick="addBask(18, 'Контейнер для мусора 15л', 1200);"> Добавить в корзину</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;">
+                            <form onsubmit="return false;">
+                                <a href="urni/Korzina/korz.html">
+                                    <img src="urni/Korzina/korz.png" id="item_19" width="100%" height="100%" >
+                                </a>
+
+                                <br>
+                                <br>
+                                <h3 class="card_content-title" style="font-size: 20px; text-align:center; ">Корзина для бумаг 10л</h3>
+                                <p style="text-align: center; font-size: 20px"> <b class="price__item">400</b> руб / шт</p>
+                                <button class="v-corz" onclick="addBask(19, 'Корзина для бумаг 10л', 400);"> Добавить в корзину</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </ul>
+    </div>
+    <!-- ============================================= -->
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card" style="background-color: rgb(0,187,0); border:none">
+                    <div class="card-body">
+                        <p class="hoz-name">ХозиТор</p>
+                        <br> Интернет-магазин оптовых продаж.
+                        <br> Работаем с 2009 года. Большой ассортимент, отличное качество, приятные цены.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" >
+                <div class="card" style="background-color: rgb(0,187,0); border:none; margin-left:500px">
+                    <div class="card-body">
+                        <p class="hoz-name">Информация</p>
+                        <br>
+                        <a href="4lab.html" style="text-decoration:none">
+                            <p class="link-fot">Скидочная карта</p>
+                        </a>
+                        <a href="3lab.html" style="text-decoration:none">
+                            <p class="link-fot">Оставить отзыв</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card" style="background-color: rgb(0,187,0); border:none">
+                        <div class="card-body">
+                            <p class="hoz-name">Принимаем к оплате</p>
+                            <br>
+                            <div class="col-sm-6">
+                                <div class="card" style="background-color: rgb(0,187,0); border:none">
+                                    <div class="card-body">
+
+                                        <img src="img/viza.png" alt="viza" width="100px" height="50px" style="background-color: rgb(0,187,0);">
+                                        <img src="img/mir.png" alt="mir" width="100px" height="50px">
+                                        <img src="img/mastercard.png" alt="mastercard" width="100px" height="50px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card" style="background-color: rgb(0,187,0); border:none; margin-left:500px">
+                        <div class="card-body">
+                            <p class="hoz-name">Мы в соцсетях</p>
+                            <br>
+                            <img src="img/telega.png" alt="tg" width="50px" height="50px">
+                            <img src="img/vk.png" alt="vk" width="50px" height="50px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="scroll-price.js"></script>
+    <script src="basket.js"></script>
+    
+</body>
+
+</html>
